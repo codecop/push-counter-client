@@ -30,10 +30,10 @@ jobs:
     - name: Check out the repo
       uses: actions/checkout@v2
 
-    - name: Report using hard-coded name (use for dedicated branches)
+    - name: Report using hard-coded name (edit here, use for dedicated branches)
       run: curl -X GET https://push-counter.herokuapp.com/record/hard-coded-name?build=green 
 
-    - name: Report using branch name (use for a pair on each branch)
+    - name: Report using branch name (dynamic, use for a pair on each branch)
       run: |
         export BRANCH=$(git symbolic-ref --short HEAD)
         curl -X GET https://push-counter.herokuapp.com/record/branch-$BRANCH?build=green 
@@ -45,9 +45,13 @@ jobs:
         else 
             export TEAM=unknown
         fi
-        export TEAM=$(head -n 1 team_name.txt)
         curl -X GET https://push-counter.herokuapp.com/record/team-$TEAM?build=green 
 
-    - name: Report using user name of last commit (use for pairs on same branch)
+    - name: Report using GitHub user of push (dynamic, use for pairs on same branch)
       run: |
-        curl -X GET https://push-counter.herokuapp.com/record/user-$GITHUB_ACTOR?build=green 
+        curl -X GET https://push-counter.herokuapp.com/record/github-$GITHUB_ACTOR?build=green 
+
+    - name: Report using user name of last commit (dynamic, use for pairs on same branch)
+      run: |
+        export USER=$(git log -1 --pretty=format:%an)
+        curl -X GET https://push-counter.herokuapp.com/record/user-$USER?build=green 
