@@ -57,9 +57,8 @@ jobs:
       run: |
         if [ -f team_names.txt ]; then
             export FILE_TEAM_NAME=$(grep "^$GITHUB_ACTOR=" "team_names.txt" | cut -d'=' -f2)
-            
         else 
-            export FILE_TEAM_NAME=unknown
+            export FILE_TEAM_NAME=$GITHUB_ACTOR
         fi
         export FILE_TEAM_NAME=$( echo "$FILE_TEAM_NAME" | sed 's/ /%20/g' )
         curl -X GET ${{ secrets.PUSH_COUNTER_URL }}/record/team-$FILE_TEAM_NAME?build=green 
