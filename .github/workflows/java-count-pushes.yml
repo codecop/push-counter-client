@@ -38,6 +38,16 @@ jobs:
         export BRANCH=$(git symbolic-ref --short HEAD)
         curl -X GET https://push-counter.herokuapp.com/record/branch-$BRANCH?build=green 
 
+    - name: Report using team name (use for a pair on each branch, need to set the name first)
+      run: |
+        if [ -f team_name.txt ]; then
+            export TEAM=$(head -n 1 team_name.txt)
+        else 
+            export TEAM=unknown
+        fi
+        export TEAM=$(head -n 1 team_name.txt)
+        curl -X GET https://push-counter.herokuapp.com/record/team-$TEAM?build=green 
+
     - name: Report using user name of last commit (use for pairs on same branch)
       run: |
         curl -X GET https://push-counter.herokuapp.com/record/user-$GITHUB_ACTOR?build=green 
