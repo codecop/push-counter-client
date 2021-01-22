@@ -31,27 +31,27 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Report using hard-coded name (edit here, use for dedicated branches)
-      run: curl -X GET https://push-counter.herokuapp.com/record/hard-coded-name?build=green 
+      run: curl -X GET ${{ PUSH_COUNTER_URL }}/record/hard-coded-name?build=green 
 
     - name: Report using branch name (dynamic, use for a pair on each branch)
       run: |
-        export BRANCH=$(git symbolic-ref --short HEAD)
-        curl -X GET https://push-counter.herokuapp.com/record/branch-$BRANCH?build=green 
+        export GIT_BRANCH_NAME=$(git symbolic-ref --short HEAD)
+        curl -X GET ${{ PUSH_COUNTER_URL }}/record/branch-$GIT_BRANCH_NAME?build=green 
 
     - name: Report using team name (use for a pair on each branch, need to set the name first)
       run: |
         if [ -f team_name.txt ]; then
-            export TEAM=$(head -n 1 team_name.txt)
+            export FILE_TEAM_NAME=$(head -n 1 team_name.txt)
         else 
-            export TEAM=unknown
+            export FILE_TEAM_NAME=unknown
         fi
-        curl -X GET https://push-counter.herokuapp.com/record/team-$TEAM?build=green 
+        curl -X GET ${{ PUSH_COUNTER_URL }}/record/team-$FILE_TEAM_NAME?build=green 
 
     - name: Report using GitHub user of push (dynamic, use for pairs on same branch)
       run: |
-        curl -X GET https://push-counter.herokuapp.com/record/github-$GITHUB_ACTOR?build=green 
+        curl -X GET ${{ PUSH_COUNTER_URL }}/record/github-$GITHUB_ACTOR?build=green 
 
     - name: Report using user name of last commit (dynamic, use for pairs on same branch)
       run: |
-        export USER=$(git log -1 --pretty=format:%an)
-        curl -X GET https://push-counter.herokuapp.com/record/user-$USER?build=green 
+        export LOG_USER_NAME=$(git log -1 --pretty=format:%an)
+        curl -X GET ${{ PUSH_COUNTER_URL }}/record/user-$LOG_USER_NAME?build=green 
