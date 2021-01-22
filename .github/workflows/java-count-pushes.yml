@@ -31,4 +31,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Report using hard-coded name (use for dedicated branches)
-      uses: curl -X GET https://push-counter.herokuapp.com/record/hard-coded-name?build=green 
+      run: curl -X GET https://push-counter.herokuapp.com/record/hard-coded-name?build=green 
