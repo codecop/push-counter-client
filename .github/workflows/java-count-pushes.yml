@@ -23,7 +23,7 @@ jobs:
     - name: Build and test
       run: mvn -B clean test
 
-  package:
+  record:
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -32,3 +32,8 @@ jobs:
 
     - name: Report using hard-coded name (use for dedicated branches)
       run: curl -X GET https://push-counter.herokuapp.com/record/hard-coded-name?build=green 
+
+    - name: Report using branch name (use for a pair on each branch)
+      run: |
+        export BRANCH=$(git symbolic-ref --short HEAD)
+        run: curl -X GET https://push-counter.herokuapp.com/record/$BRANCH?build=green 
