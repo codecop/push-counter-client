@@ -36,4 +36,4 @@ jobs:
     - name: Report using branch name (use for a pair on each branch)
       run: |
         export BRANCH=$(git symbolic-ref --short HEAD)
-        run: curl -X GET https://push-counter.herokuapp.com/record/$BRANCH?build=green 
+        curl -X GET https://push-counter.herokuapp.com/record/$BRANCH?build=green 
