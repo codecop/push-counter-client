@@ -40,4 +40,4 @@ jobs:
 
     - name: Report using user name of last commit (use for pairs on same branch)
       run: |
-        curl -X GET https://push-counter.herokuapp.com/record/user-${{ GITHUB_ACTOR }}?build=green 
+        curl -X GET https://push-counter.herokuapp.com/record/user-$GITHUB_ACTOR?build=green 
