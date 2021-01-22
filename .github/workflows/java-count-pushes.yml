@@ -22,3 +22,13 @@ jobs:
 
     - name: Build and test
       run: mvn -B clean test
+
+  package:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v2
+
+    - name: Report using hard-coded name (use for dedicated branches)
+      uses: curl -X GET https://push-counter.herokuapp.com/record/hard-coded-name?build=green 
