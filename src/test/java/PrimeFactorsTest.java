@@ -27,4 +27,9 @@ public class PrimeFactorsTest {
         assertEquals(Arrays.asList(2, 2), PrimeFactors.generate(4));
     }
 
+    @Test
+    public void eight() {
+        assertEquals(Arrays.asList(2, 2, 2), PrimeFactors.generate(8));
+    }
+
 }
