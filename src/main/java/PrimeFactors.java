@@ -14,10 +14,6 @@ public class PrimeFactors {
             }
         }
 
-        if (remaining > 1) {
-            factors.add(remaining);
-        }
-
         return factors;
     }
 
