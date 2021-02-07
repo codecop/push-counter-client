@@ -30,42 +30,8 @@ jobs:
     - name: Check out the repo
       uses: actions/checkout@v2
 
-    - name: Report using hard-coded name (edit here, use for dedicated branches)
-      run: curl -X GET ${{ secrets.PUSH_COUNTER_URL }}/record/hard-coded-name?build=green 
-
     - name: Report using branch name (dynamic, use for a pair on each branch)
       run: |
         export GIT_BRANCH_NAME=$(git symbolic-ref --short HEAD)
         export GIT_BRANCH_NAME=$( echo "$GIT_BRANCH_NAME" | sed 's/ /%20/g' )
         curl -X GET ${{ secrets.PUSH_COUNTER_URL }}/record/branch-$GIT_BRANCH_NAME?build=green 
-
-    - name: Report using team name (use for a pair on each branch, need to set the name first)
-      run: |
-        if [ -f team_name.txt ]; then
-            export FILE_TEAM_NAME=$(head -n 1 team_name.txt)
-        else 
-            export FILE_TEAM_NAME=unknown
-        fi
-        export FILE_TEAM_NAME=$( echo "$FILE_TEAM_NAME" | sed 's/ /%20/g' )
-        curl -X GET ${{ secrets.PUSH_COUNTER_URL }}/record/team-$FILE_TEAM_NAME?build=green 
-
-    - name: Report using GitHub user of push (dynamic, use for pairs on same branch)
-      run: |
-        curl -X GET ${{ secrets.PUSH_COUNTER_URL }}/record/github-$GITHUB_ACTOR?build=green 
-
-    - name: Report using team name lookup by GitHub user (use for all pairs same branch, need to set the name first)
-      run: |
-        if [ -f team_names.txt ]; then
-            export FILE_TEAM_NAME=$(grep "^$GITHUB_ACTOR=" "team_names.txt" | cut -d'=' -f2)
-        else 
-            export FILE_TEAM_NAME=$GITHUB_ACTOR
-        fi
-        export FILE_TEAM_NAME=$( echo "$FILE_TEAM_NAME" | sed 's/ /%20/g' )
-        curl -X GET ${{ secrets.PUSH_COUNTER_URL }}/record/team-$FILE_TEAM_NAME?build=green 
-
-    - name: Report using user name of last commit (dynamic, use for pairs on same branch)
-      run: |
-        export LOG_USER_NAME=$(git log -1 --pretty=format:%an)
-        export LOG_USER_NAME=$( echo "$LOG_USER_NAME" | sed 's/ /%20/g' )
-        curl -X GET ${{ secrets.PUSH_COUNTER_URL }}/record/user-$LOG_USER_NAME?build=green 
-        
