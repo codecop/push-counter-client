@@ -11,4 +11,9 @@ public class PrimeFactorsTest {
         assertEquals(Collections.<Integer>emptyList(), PrimeFactors.generate(1));
     }
 
+    @Test
+    public void two() {
+        assertEquals(Collections.singletonList(2), PrimeFactors.generate(2));
+    }
+
 }
