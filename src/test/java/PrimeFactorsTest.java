@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
 import java.util.Collections;
 
 import org.junit.Test;
@@ -19,6 +20,11 @@ public class PrimeFactorsTest {
     @Test
     public void three() {
         assertEquals(Collections.singletonList(3), PrimeFactors.generate(3));
+    }
+
+    @Test
+    public void four() {
+        assertEquals(Arrays.asList(2, 2), PrimeFactors.generate(4));
     }
 
 }
