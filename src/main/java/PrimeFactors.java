@@ -7,7 +7,12 @@ public class PrimeFactors {
         List<Integer> factors = new ArrayList<>();
 
         int candidate = 2;
+        while (n % candidate == 0) {
+            factors.add(candidate);
+            n /= candidate;
+        }
 
+        candidate = 3;
         while (n % candidate == 0) {
             factors.add(candidate);
             n /= candidate;
