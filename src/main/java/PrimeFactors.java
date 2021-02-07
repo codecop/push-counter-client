@@ -6,7 +6,7 @@ public class PrimeFactors {
     public static List<Integer> generate(int n) {
         List<Integer> factors = new ArrayList<>();
 
-        for (int candidate = 2; candidate <= 3; candidate++) {
+        for (int candidate = 2; candidate <= n; candidate++) {
             while (n % candidate == 0) {
                 factors.add(candidate);
                 n /= candidate;

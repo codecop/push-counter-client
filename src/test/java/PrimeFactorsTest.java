@@ -37,4 +37,9 @@ public class PrimeFactorsTest {
         assertEquals(Arrays.asList(3, 3), PrimeFactors.generate(9));
     }
 
+    @Test
+    public void twentyFive() {
+        assertEquals(Arrays.asList(5, 5), PrimeFactors.generate(25));
+    }
+
 }
