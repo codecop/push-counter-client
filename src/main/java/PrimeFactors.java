@@ -6,15 +6,16 @@ public class PrimeFactors {
     public static List<Integer> generate(int n) {
         List<Integer> factors = new ArrayList<>();
 
-        for (int candidate = 2; candidate <= n; candidate++) {
-            while (n % candidate == 0) {
+        int remaining = n;
+        for (int candidate = 2; candidate <= remaining; candidate++) {
+            while (remaining % candidate == 0) {
                 factors.add(candidate);
-                n /= candidate;
+                remaining /= candidate;
             }
         }
 
-        if (n > 1) {
-            factors.add(n);
+        if (remaining > 1) {
+            factors.add(remaining);
         }
 
         return factors;
