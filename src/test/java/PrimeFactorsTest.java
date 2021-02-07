@@ -16,4 +16,9 @@ public class PrimeFactorsTest {
         assertEquals(Collections.singletonList(2), PrimeFactors.generate(2));
     }
 
+    @Test
+    public void three() {
+        assertEquals(Collections.singletonList(3), PrimeFactors.generate(3));
+    }
+
 }
