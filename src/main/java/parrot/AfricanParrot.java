@@ -6,4 +6,5 @@ public class AfricanParrot extends Parrot{
         super(type, numberOfCoconuts, voltage, isNailed);
     }
 
+
 }
