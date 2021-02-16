@@ -16,8 +16,6 @@ public class Parrot {
 
     public double getSpeed() {
         switch (type) {
-        case NORWEGIAN_BLUE:
-            return (isNailed) ? 0 : Math.min(24.0, voltage * getBaseSpeed());
         default:
             return type.getSpeed(getBaseSpeed(), getLoadFactor(), voltage, numberOfCoconuts, isNailed);
         }
