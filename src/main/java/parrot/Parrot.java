@@ -2,10 +2,10 @@ package parrot;
 
 public class Parrot {
 
-	private ParrotTypeEnum type;
-	private int numberOfCoconuts;
-	private double voltage;
-	private boolean isNailed;
+	private final ParrotTypeEnum type;
+	private final int numberOfCoconuts;
+	private final double voltage;
+	private final boolean isNailed;
 
 	public Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, boolean isNailed) {
 		this.type = type;
