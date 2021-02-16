@@ -1,6 +1,7 @@
 package parrot;
 
 public class AfricanParrot extends Parrot {
+    private static final double AFRICAN_LOAD_FACTOR = 9.0;
 
     private final int numberOfCoconuts;
 
@@ -15,7 +16,7 @@ public class AfricanParrot extends Parrot {
     }
 
     private double getLoadFactor() {
-        return 9.0;
+        return AFRICAN_LOAD_FACTOR;
     }
 
 }
