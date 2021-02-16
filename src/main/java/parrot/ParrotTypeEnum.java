@@ -19,12 +19,14 @@ public enum ParrotTypeEnum {
 		}
 	};
 
+	private static final double LOAD_FACTOR = 9.0;
+
 	public double getSpeed(double voltage, int numberOfCoconuts, boolean isNailed) {
 		throw new RuntimeException("Should be unreachable");
 	}
 
 	protected double getLoadFactor() {
-		return 9.0;
+		return LOAD_FACTOR;
 	}
 
 	protected double getBaseSpeed() {
