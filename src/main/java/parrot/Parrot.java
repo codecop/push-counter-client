@@ -18,7 +18,7 @@ public class Parrot {
 
     public Parrot(ParrotInt parrot) {
         this.parrot = parrot;
-        this.type = ParrotTypeEnum.EUROPEAN;
+        this.type = parrot.getType();
     }
 
     public double getSpeed() {
