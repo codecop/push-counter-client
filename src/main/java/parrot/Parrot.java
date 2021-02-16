@@ -4,27 +4,22 @@ public class Parrot {
 
     private ParrotTypeEnum type;
     private int numberOfCoconuts;
-    private double voltage;
-    private boolean isNailed;
 
-    public Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, boolean isNailed) {
+    public Parrot(ParrotTypeEnum type, int numberOfCoconuts) {
         this.type = type;
         this.numberOfCoconuts = numberOfCoconuts;
-        this.voltage = voltage;
-        this.isNailed = isNailed;
     }
 
     public double getSpeed() {
         switch (type) {
-        case EUROPEAN:
-            return getBaseSpeed();
-        case AFRICAN:
-            return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
-        default:
-            throw new RuntimeException("Should be unreachable");
+            case EUROPEAN:
+                return getBaseSpeed();
+            case AFRICAN:
+                return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
+            default:
+                throw new RuntimeException("Should be unreachable");
         }
     }
-
 
 
     protected double getLoadFactor() {
