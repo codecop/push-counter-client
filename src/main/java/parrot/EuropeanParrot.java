@@ -6,4 +6,9 @@ public class EuropeanParrot implements ParrotInt {
     public double getSpeed() {
         return 12.0;
     }
+
+    @Override
+    public ParrotTypeEnum getType() {
+        return ParrotTypeEnum.EUROPEAN;
+    }
 }
