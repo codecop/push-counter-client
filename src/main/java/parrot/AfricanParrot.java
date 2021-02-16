@@ -8,4 +8,9 @@ public class AfricanParrot extends Parrot {
         super(ParrotTypeEnum.AFRICAN, numberOfCoconuts);
         this.numberOfCoconuts = numberOfCoconuts;
     }
+
+    public double getSpeed() {
+        return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
+    }
+
 }
