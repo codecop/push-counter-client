@@ -1,6 +1,6 @@
 package parrot;
 
-public abstract class ParrotInt {
+public abstract class Parrot {
 
     abstract double getSpeed();
 

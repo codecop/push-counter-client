@@ -1,6 +1,6 @@
 package parrot;
 
-public class NorwegianBlueParrot extends ParrotInt {
+public class NorwegianBlueParrot extends Parrot {
 
     private double voltage;
     private boolean isNailed;
