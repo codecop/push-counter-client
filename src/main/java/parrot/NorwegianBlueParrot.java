@@ -3,7 +3,7 @@ package parrot;
 public class NorwegianBlueParrot extends Parrot {
 
     private final double voltage;
-    private boolean isNailed;
+    private final boolean isNailed;
 
     public NorwegianBlueParrot(final ParrotTypeEnum type, final double voltage, final boolean isNailed) {
         super(type);
