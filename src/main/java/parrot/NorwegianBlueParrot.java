@@ -1,9 +1,9 @@
 package parrot;
 
-public class NorwegianBlueParrot extends Parrot{
+public class NorwegianBlueParrot extends Parrot {
 
-    public NorwegianBlueParrot(final ParrotTypeEnum type, final int numberOfCoconuts, final double voltage, final boolean isNailed) {
-        super(type, numberOfCoconuts, voltage, isNailed);
+    public NorwegianBlueParrot(final ParrotTypeEnum type, final double voltage, final boolean isNailed) {
+        super(type, voltage, isNailed);
     }
 
 }

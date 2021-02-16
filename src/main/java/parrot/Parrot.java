@@ -3,13 +3,11 @@ package parrot;
 public class Parrot {
 
     private ParrotTypeEnum type;
-    protected int numberOfCoconuts;
     private double voltage;
     private boolean isNailed;
 
-    public Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, boolean isNailed) {
+    public Parrot(ParrotTypeEnum type, double voltage, boolean isNailed) {
         this.type = type;
-        this.numberOfCoconuts = numberOfCoconuts;
         this.voltage = voltage;
         this.isNailed = isNailed;
     }
@@ -39,8 +37,6 @@ public class Parrot {
     private double norwegianMethod() {
         return (isNailed) ? 0 : getBaseSpeed(voltage);
     }
-
-
 
 
 }
