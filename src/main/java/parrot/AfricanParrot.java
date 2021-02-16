@@ -13,11 +13,6 @@ public class AfricanParrot extends ParrotInt {
         return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
     }
 
-    @Override
-    public ParrotTypeEnum getType() {
-        return ParrotTypeEnum.AFRICAN;
-    }
-
     private double getLoadFactor() {
         return 9.0;
     }

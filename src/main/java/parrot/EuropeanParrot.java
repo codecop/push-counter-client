@@ -7,8 +7,4 @@ public class EuropeanParrot extends ParrotInt {
         return getBaseSpeed();
     }
 
-    @Override
-    public ParrotTypeEnum getType() {
-        return ParrotTypeEnum.EUROPEAN;
-    }
 }
