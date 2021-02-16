@@ -2,7 +2,7 @@ package parrot;
 
 public class Parrot {
 
-    public Parrot(ParrotTypeEnum type) {
+    public Parrot() {
     }
 
     public double getSpeed() {
