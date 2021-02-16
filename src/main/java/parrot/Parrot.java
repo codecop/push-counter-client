@@ -4,7 +4,7 @@ public class Parrot {
 
     private ParrotTypeEnum type;
 
-    public Parrot(ParrotTypeEnum type, double voltage, boolean isNailed) {
+    public Parrot(ParrotTypeEnum type, boolean isNailed) {
         this.type = type;
     }
 
