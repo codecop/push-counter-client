@@ -5,12 +5,10 @@ public class Parrot {
     private ParrotInt parrot;
 
     private ParrotTypeEnum type;
-    private double voltage;
     private boolean isNailed;
 
     public Parrot(ParrotTypeEnum type, double voltage, boolean isNailed) {
         this.type = type;
-        this.voltage = voltage;
         this.isNailed = isNailed;
     }
 
