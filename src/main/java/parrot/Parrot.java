@@ -15,7 +15,7 @@ public class Parrot {
 	}
 
 	public double getSpeed() {
-		return type.getSpeed(getLoadFactor(), voltage, numberOfCoconuts, isNailed);
+		return type.getSpeed(voltage, numberOfCoconuts, isNailed);
 	}
 
 	private double getLoadFactor() {
