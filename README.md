@@ -2,6 +2,10 @@
 
 [Parrot Refactoring Kata by Emily Bache](https://github.com/emilybache/Parrot-Refactoring-Kata).
 
+## Branch
+
+Peter K. & Tibor V
+
 ## License
 
 Copyright (c) 2021, Peter Kofler. All rights reserved.
