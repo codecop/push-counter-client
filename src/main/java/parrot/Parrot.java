@@ -25,7 +25,7 @@ public class Parrot {
         case AFRICAN:
             return parrot.getSpeed();
         case NORWEGIAN_BLUE:
-            return (isNailed) ? 0 : getBaseSpeed(voltage);
+            return parrot.getSpeed();
         default:
             throw new RuntimeException("Should be unreachable");
         }
