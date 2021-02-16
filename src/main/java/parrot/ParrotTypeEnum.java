@@ -5,17 +5,17 @@ public enum ParrotTypeEnum {
 	EUROPEAN {
 		@Override
 		public double getSpeed(double loadFactor, double voltage, int numberOfCoconuts, boolean isNailed) {
-			return this.getBaseSpeed();
+			return getBaseSpeed();
 		}
 	}, AFRICAN {
 		@Override
 		public double getSpeed(double loadFactor, double voltage, int numberOfCoconuts, boolean isNailed) {
-			return Math.max(0, this.getBaseSpeed() - loadFactor * numberOfCoconuts);
+			return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
 		}
 	}, NORWEGIAN_BLUE {
 		@Override
 		public double getSpeed(double loadFactor, double voltage, int numberOfCoconuts, boolean isNailed) {
-			return (isNailed) ? 0 : Math.min(24.0, voltage * this.getBaseSpeed());
+			return (isNailed) ? 0 : Math.min(24.0, voltage * getBaseSpeed());
 		}
 	};
 
