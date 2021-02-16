@@ -2,7 +2,7 @@ package parrot;
 
 public class AfricanParrot extends Parrot {
 
-    public static final int AFRICAN_BASE_SPEED = 0;
+    private static final int AFRICAN_BASE_SPEED = 0;
     private static final double AFRICAN_LOAD_FACTOR = 9.0;
 
     private final int numberOfCoconuts;
