@@ -23,4 +23,12 @@ public enum ParrotTypeEnum {
 		throw new RuntimeException("Should be unreachable");
 	}
 
+	private double getLoadFactor() {
+		return 9.0;
+	}
+
+	private double getBaseSpeed() {
+		return 12.0;
+	}
+
 }
