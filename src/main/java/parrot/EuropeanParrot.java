@@ -6,4 +6,8 @@ public class EuropeanParrot extends Parrot {
         super(ParrotTypeEnum.EUROPEAN, numberOfCoconuts);
     }
 
+    public double getSpeed() {
+        return getBaseSpeed();
+    }
+
 }
