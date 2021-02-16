@@ -7,20 +7,12 @@ public class Parrot {
     private ParrotTypeEnum type;
 
 
-
     public Parrot(ParrotInt parrot) {
         this.parrot = parrot;
         this.type = parrot.getType();
     }
 
     public double getSpeed() {
-        switch (type) {
-        case EUROPEAN:
-        case AFRICAN:
-        case NORWEGIAN_BLUE:
-            return parrot.getSpeed();
-        default:
-            throw new RuntimeException("Should be unreachable");
-        }
+        return parrot.getSpeed();
     }
 }
