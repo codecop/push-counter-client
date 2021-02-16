@@ -17,7 +17,7 @@ public class NorwegianBlueParrot extends Parrot {
 
     @Override
     protected double getBaseSpeed() {
-        return Math.min(24.0, voltage * super.getBaseSpeed());
+        return Math.min(24.0, voltage * BASE_SPEED);
     }
 
 }
