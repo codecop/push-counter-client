@@ -2,7 +2,7 @@ package parrot;
 
 public abstract class Parrot {
 
-    public Parrot(ParrotTypeEnum type) {
+    public Parrot() {
     }
 
     public abstract double getSpeed();
