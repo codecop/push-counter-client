@@ -2,7 +2,7 @@ package parrot;
 
 public class Parrot {
 
-    private ParrotTypeEnum type;
+    private final ParrotTypeEnum type;
 
     public Parrot(ParrotTypeEnum type) {
         this.type = type;
