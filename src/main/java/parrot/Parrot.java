@@ -21,7 +21,7 @@ public class Parrot {
         case NORWEGIAN_BLUE:
             return (isNailed) ? 0 : getBaseSpeed(voltage);
         default:
-            return type.getSpeed(getBaseSpeed(), getLoadFactor(), numberOfCoconuts);
+            return type.getSpeed(getBaseSpeed(), getLoadFactor(), numberOfCoconuts, isNailed);
         }
     }
 
