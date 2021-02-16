@@ -10,7 +10,7 @@ public enum ParrotTypeEnum {
 	}, AFRICAN, NORWEGIAN_BLUE;
 
 	public double getSpeed(double baseSpeed) {
-		return baseSpeed;
+		throw new RuntimeException("Should be unreachable");
 	}
 
 }
