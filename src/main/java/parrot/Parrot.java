@@ -5,13 +5,11 @@ public class Parrot {
     private ParrotInt parrot;
 
     private ParrotTypeEnum type;
-    private int numberOfCoconuts;
     private double voltage;
     private boolean isNailed;
 
     public Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, boolean isNailed) {
         this.type = type;
-        this.numberOfCoconuts = numberOfCoconuts;
         this.voltage = voltage;
         this.isNailed = isNailed;
     }
