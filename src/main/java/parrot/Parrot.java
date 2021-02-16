@@ -9,10 +9,6 @@ public class Parrot {
     }
 
     public double getSpeed() {
-        switch (type) {
-            case EUROPEAN:
-                return getBaseSpeed();
-        }
         return getBaseSpeed();
     }
 
