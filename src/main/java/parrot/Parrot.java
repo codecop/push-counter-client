@@ -10,14 +10,7 @@ public abstract class Parrot {
         this.numberOfCoconuts = numberOfCoconuts;
     }
 
-    public double getSpeed() {
-        switch (type) {
-            case AFRICAN:
-                return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
-            default:
-                throw new RuntimeException("Should be unreachable");
-        }
-    }
+    public abstract double getSpeed();
 
 
     protected double getLoadFactor() {
