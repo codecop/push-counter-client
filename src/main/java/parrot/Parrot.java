@@ -26,7 +26,7 @@ public class Parrot {
         case EUROPEAN:
             return parrot.getSpeed();
         case AFRICAN:
-            return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
+            return parrot.getSpeed();
         case NORWEGIAN_BLUE:
             return (isNailed) ? 0 : getBaseSpeed(voltage);
         default:
