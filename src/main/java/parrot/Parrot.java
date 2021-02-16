@@ -12,8 +12,6 @@ public class Parrot {
         switch (type) {
             case EUROPEAN:
                 return getBaseSpeed();
-            case AFRICAN:
-                return getBaseSpeed();
         }
         return getBaseSpeed();
     }
