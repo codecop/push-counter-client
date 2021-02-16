@@ -17,4 +17,8 @@ public class AfricanParrot extends ParrotInt {
     public ParrotTypeEnum getType() {
         return ParrotTypeEnum.AFRICAN;
     }
+
+    private double getLoadFactor() {
+        return 9.0;
+    }
 }

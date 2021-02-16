@@ -9,4 +9,5 @@ public abstract class ParrotInt {
     protected double getBaseSpeed() {
         return 12.0;
     }
+
 }
