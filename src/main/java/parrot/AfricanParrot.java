@@ -10,7 +10,7 @@ public class AfricanParrot extends Parrot {
     }
 
     @Override
-    protected double getBaseSpeed() {
+    public double getBaseSpeed() {
         return Math.max(0, substractAfricanFactorFromBaseSpeed());
     }
 
