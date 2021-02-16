@@ -2,6 +2,7 @@ package parrot;
 
 public class NorwegianBlueParrot extends Parrot {
 
+    public static final double SPEED = 24.0;
     private final double voltage;
     private final boolean isNailed;
 
@@ -21,7 +22,7 @@ public class NorwegianBlueParrot extends Parrot {
     }
 
     private double getBaseSpeed(double voltage) {
-        return Math.min(24.0, countVoltage(voltage));
+        return Math.min(SPEED, countVoltage(voltage));
     }
 
     private double countVoltage(final double voltage) {
