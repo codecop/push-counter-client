@@ -5,17 +5,17 @@ public enum ParrotTypeEnum {
 	EUROPEAN {
 		@Override
 		public double getSpeed(double voltage, int numberOfCoconuts, boolean isNailed) {
-			return getBaseSpeed();
+			return BASE_SPEED;
 		}
 	}, AFRICAN {
 		@Override
 		public double getSpeed(double voltage, int numberOfCoconuts, boolean isNailed) {
-			return Math.max(0, getBaseSpeed() - LOAD_FACTOR * numberOfCoconuts);
+			return Math.max(0, BASE_SPEED - LOAD_FACTOR * numberOfCoconuts);
 		}
 	}, NORWEGIAN_BLUE {
 		@Override
 		public double getSpeed(double voltage, int numberOfCoconuts, boolean isNailed) {
-			return (isNailed) ? 0 : Math.min(24.0, voltage * getBaseSpeed());
+			return (isNailed) ? 0 : Math.min(24.0, voltage * BASE_SPEED);
 		}
 	};
 
@@ -24,10 +24,6 @@ public enum ParrotTypeEnum {
 
 	public double getSpeed(double voltage, int numberOfCoconuts, boolean isNailed) {
 		throw new RuntimeException("Should be unreachable");
-	}
-
-	protected double getBaseSpeed() {
-		return BASE_SPEED;
 	}
 
 }
