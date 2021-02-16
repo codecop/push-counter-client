@@ -3,11 +3,9 @@ package parrot;
 public abstract class Parrot {
 
     private ParrotTypeEnum type;
-    private int numberOfCoconuts;
 
     public Parrot(ParrotTypeEnum type, int numberOfCoconuts) {
         this.type = type;
-        this.numberOfCoconuts = numberOfCoconuts;
     }
 
     public abstract double getSpeed();
