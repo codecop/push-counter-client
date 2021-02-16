@@ -20,7 +20,7 @@ public class NorwegianBlueParrot extends ParrotInt {
         return ParrotTypeEnum.NORWEGIAN_BLUE;
     }
 
-    private double getLoadFactor() {
-        return 9.0;
+    private double getBaseSpeed(double voltage) {
+        return Math.min(24.0, voltage * getBaseSpeed());
     }
 }
