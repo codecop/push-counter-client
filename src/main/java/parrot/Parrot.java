@@ -23,7 +23,6 @@ public class Parrot {
         switch (type) {
         case EUROPEAN:
         case AFRICAN:
-            return parrot.getSpeed();
         case NORWEGIAN_BLUE:
             return parrot.getSpeed();
         default:
