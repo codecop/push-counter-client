@@ -14,8 +14,6 @@ public class Parrot {
                 return getBaseSpeed();
             case AFRICAN:
                 return getBaseSpeed();
-            case NORWEGIAN_BLUE:
-                return getBaseSpeed();
         }
         return getBaseSpeed();
     }
