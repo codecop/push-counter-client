@@ -1,8 +1,7 @@
 package parrot;
 
 public class NorwegianBlueParrot extends Parrot {
-
-    public static final double SPEED = 24.0;
+    private static final double SPEED = 24.0;
     private final double voltage;
     private final boolean isNailed;
 
