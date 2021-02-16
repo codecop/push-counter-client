@@ -2,6 +2,8 @@ package parrot;
 
 public class Parrot {
 
+    public static final double BASE_SPEED = 12.0;
+
     public Parrot() {
     }
 
@@ -10,7 +12,7 @@ public class Parrot {
     }
 
     protected double getBaseSpeed() {
-        return 12.0;
+        return BASE_SPEED;
     }
 
 }
