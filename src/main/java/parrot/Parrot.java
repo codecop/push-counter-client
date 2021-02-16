@@ -2,7 +2,7 @@ package parrot;
 
 public class Parrot {
 
-    public static final double BASE_SPEED = 12.0;
+    private static final double BASE_SPEED = 12.0;
 
     public Parrot() {
     }
