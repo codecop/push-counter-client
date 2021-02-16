@@ -3,11 +3,9 @@ package parrot;
 public abstract class Parrot {
     private static final double BASE_SPEED = 12.0;
 
-    public double getSpeed() {
-        return getBaseSpeed();
-    }
+    public abstract double getSpeed();
 
-    public double getBaseSpeed() {
+    protected double getBaseSpeed() {
         return BASE_SPEED;
     }
 
