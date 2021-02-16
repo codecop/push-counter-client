@@ -2,10 +2,7 @@ package parrot;
 
 public abstract class Parrot {
 
-    private ParrotTypeEnum type;
-
     public Parrot(ParrotTypeEnum type) {
-        this.type = type;
     }
 
     public abstract double getSpeed();
