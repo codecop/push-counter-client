@@ -16,9 +16,8 @@ public class Parrot {
                 return getBaseSpeed();
             case NORWEGIAN_BLUE:
                 return getBaseSpeed();
-            default:
-                throw new RuntimeException("Should be unreachable");
         }
+        return getBaseSpeed();
     }
 
     protected double getBaseSpeed() {
