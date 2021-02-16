@@ -1,8 +1,8 @@
 package parrot;
 
-public interface ParrotInt {
+public abstract class ParrotInt {
 
-    double getSpeed();
+    abstract double getSpeed();
 
-    ParrotTypeEnum getType();
+    abstract ParrotTypeEnum getType();
 }

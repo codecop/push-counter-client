@@ -1,6 +1,6 @@
 package parrot;
 
-public class AfricanParrot implements ParrotInt {
+public class AfricanParrot extends ParrotInt {
 
     private final int numberOfCoconuts;
 
