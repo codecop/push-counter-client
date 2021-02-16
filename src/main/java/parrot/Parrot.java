@@ -2,6 +2,8 @@ package parrot;
 
 public class Parrot {
 
+    private ParrotInt parrot;
+
     private ParrotTypeEnum type;
     private int numberOfCoconuts;
     private double voltage;
@@ -12,6 +14,10 @@ public class Parrot {
         this.numberOfCoconuts = numberOfCoconuts;
         this.voltage = voltage;
         this.isNailed = isNailed;
+    }
+
+    public Parrot(ParrotInt parrot) {
+        this.parrot = parrot;
     }
 
     public double getSpeed() {
