@@ -2,15 +2,17 @@ package parrot;
 
 public class NorwegianBlueParrot extends ParrotInt {
 
-    private final int numberOfCoconuts;
+    private double voltage;
+    private boolean isNailed;
 
-    public NorwegianBlueParrot(int numberOfCoconuts) {
-        this.numberOfCoconuts = numberOfCoconuts;
+    public NorwegianBlueParrot(double voltage, boolean isNailed) {
+        this.voltage = voltage;
+        this.isNailed = isNailed;
     }
 
     @Override
     public double getSpeed() {
-        return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
+        return 0;
     }
 
     @Override
