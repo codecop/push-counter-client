@@ -6,5 +6,13 @@ public class AfricanParrot extends Parrot{
         super(type, numberOfCoconuts, voltage, isNailed);
     }
 
+    @Override
+    protected double getBaseSpeed() {
+        return Math.max(0, super.getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
+    }
+
+    private double getLoadFactor() {
+        return 9.0;
+    }
 
 }
