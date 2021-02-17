@@ -1,7 +1,6 @@
 package parrot;
 
 public class AfricanParrot implements Parrot{
-    private static final int ZERO = 0;
     private final int numberOfCoconuts;
 
     public AfricanParrot(int numberOfCoconuts) {
