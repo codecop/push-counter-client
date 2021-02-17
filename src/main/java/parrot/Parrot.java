@@ -2,11 +2,9 @@ package parrot;
 
 public class Parrot {
 
-    private final double voltage;
     private final boolean isNailed;
 
     public Parrot(final double voltage, final boolean isNailed) {
-        this.voltage = voltage;
         this.isNailed = isNailed;
     }
 
@@ -30,7 +28,4 @@ public class Parrot {
         return isNailed;
     }
 
-    protected double getVoltage() {
-        return voltage;
-    }
 }

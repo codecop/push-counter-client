@@ -11,6 +11,6 @@ public class NorwegianBlueParrot extends Parrot {
 
     @Override
     public double getSpeed() {
-        return (isNailed()) ? 0 : getBaseSpeed(getVoltage());
+        return (isNailed()) ? 0 : getBaseSpeed(parrotVoltage);
     }
 }
