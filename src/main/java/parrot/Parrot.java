@@ -16,8 +16,6 @@ public class Parrot {
 
     public double getSpeed() {
         switch (type) {
-            case EUROPEAN:
-                return getBaseSpeed();
             case NORWEGIAN_BLUE:
                 return (isNailed) ? 0 : getBaseSpeed(voltage);
             default:
