@@ -37,7 +37,7 @@ public class Parrot {
         return numberOfCoconuts;
     }
 
-    public boolean isNailed() {
+    protected boolean isNailed() {
         return isNailed;
     }
 
