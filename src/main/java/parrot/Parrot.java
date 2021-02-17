@@ -3,7 +3,7 @@ package parrot;
 public class Parrot {
 
     private final int numberOfCoconuts;
-    private double voltage;
+    private final double voltage;
     private boolean isNailed;
 
     public Parrot(int numberOfCoconuts, double voltage, boolean isNailed) {
