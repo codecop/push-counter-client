@@ -5,16 +5,16 @@ public class NorwegianParrot extends Parrot {
     private static final double MAX_SPEED = 24.0;
     private static final int NAILED_SPEED = 0;
     private final double voltage;
-    private final boolean isNailed;
+    private final boolean nailed;
 
-    public NorwegianParrot(final double voltage, final boolean isNailed) {
+    public NorwegianParrot(final double voltage, final boolean nailed) {
         this.voltage = voltage;
-        this.isNailed = isNailed;
+        this.nailed = nailed;
     }
 
     @Override
     public double getSpeed() {
-        return isNailed ? NAILED_SPEED : getBaseSpeed();
+        return nailed ? NAILED_SPEED : getBaseSpeed();
     }
 
     private double getBaseSpeed() {
