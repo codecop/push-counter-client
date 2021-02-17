@@ -17,6 +17,6 @@ public class NorwegianBlueParrot implements Parrot{
     }
 
     private double getBaseSpeed() {
-        return Math.min(MIN_SPEED, voltage * NumbersEnum.BASESPEED.getValue());
+        return Math.min(NumbersEnum.MIN_SPEED.getValue(), voltage * NumbersEnum.BASESPEED.getValue());
     }
 }
