@@ -2,7 +2,7 @@ package parrot;
 
 public class Parrot {
 
-    public Parrot(final boolean isNailed) {
+    public Parrot() {
     }
 
     public double getSpeed() {
