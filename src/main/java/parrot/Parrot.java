@@ -39,4 +39,7 @@ public class Parrot {
         return 12.0;
     }
 
+    public int getNumberOfCoconuts() {
+        return numberOfCoconuts;
+    }
 }
