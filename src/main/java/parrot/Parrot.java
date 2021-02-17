@@ -4,7 +4,7 @@ public class Parrot {
 
     private final int numberOfCoconuts;
     private final double voltage;
-    private boolean isNailed;
+    private final boolean isNailed;
 
     public Parrot(int numberOfCoconuts, double voltage, boolean isNailed) {
         this.numberOfCoconuts = numberOfCoconuts;
