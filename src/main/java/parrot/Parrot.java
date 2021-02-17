@@ -38,4 +38,8 @@ public class Parrot {
     public int getNumberOfCoconuts() {
         return numberOfCoconuts;
     }
+
+    public boolean isNailed() {
+        return isNailed;
+    }
 }
