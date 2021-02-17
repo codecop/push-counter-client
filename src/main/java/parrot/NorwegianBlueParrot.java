@@ -2,7 +2,7 @@ package parrot;
 
 public class NorwegianBlueParrot extends Parrot{
     private final boolean isNailed;
-    private double voltage;
+    private final double voltage;
 
     public NorwegianBlueParrot(double voltage, boolean isNailed) {
         this.isNailed = isNailed;
