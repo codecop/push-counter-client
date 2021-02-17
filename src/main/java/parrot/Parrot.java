@@ -2,12 +2,10 @@ package parrot;
 
 public class Parrot {
 
-    private final int numberOfCoconuts;
     private final double voltage;
     private final boolean isNailed;
 
     public Parrot(final int numberOfCoconuts, final double voltage, final boolean isNailed) {
-        this.numberOfCoconuts = numberOfCoconuts;
         this.voltage = voltage;
         this.isNailed = isNailed;
     }
@@ -26,10 +24,6 @@ public class Parrot {
 
     protected double getBaseSpeed() {
         return 12.0;
-    }
-
-    protected int getNumberOfCoconuts() {
-        return numberOfCoconuts;
     }
 
     protected boolean isNailed() {
