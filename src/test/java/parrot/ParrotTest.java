@@ -47,4 +47,11 @@ public class ParrotTest {
         Parrot parrot = new NorwegianBlueParrot(4, false);
         assertEquals(24.0, parrot.getSpeed(), 0.0);
     }
+
+    @Test
+    public void getSpeedNorwegianBlueParrot_nailed_high_voltage() {
+        Parrot parrot = new NorwegianBlueParrot(4, true);
+        assertEquals(0.0, parrot.getSpeed(), 0.0);
+    }
+
 }
