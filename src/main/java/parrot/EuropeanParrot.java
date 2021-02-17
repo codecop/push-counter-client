@@ -4,6 +4,6 @@ public class EuropeanParrot implements Parrot{
 
     @Override
     public double getSpeed(){
-        return BASESPEED;
+        return NumbersEnum.BASESPEED.getValue();
     }
 }
