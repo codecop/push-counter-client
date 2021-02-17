@@ -10,7 +10,7 @@ public class AfricanParrot implements Parrot{
 
     @Override
     public double getSpeed() {
-        return Math.max(ZERO, NumbersEnum.BASESPEED.getValue() - NumbersEnum.LOAD_FACTOR.getValue() * numberOfCoconuts);
+        return Math.max(NumbersEnum.ZERO.getValue(), NumbersEnum.BASESPEED.getValue() - NumbersEnum.LOAD_FACTOR.getValue() * numberOfCoconuts);
     }
 
 }
