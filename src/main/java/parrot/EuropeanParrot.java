@@ -1,7 +1,7 @@
 package parrot;
 
 public class EuropeanParrot extends Parrot {
-    public EuropeanParrot(int numberOfCoconuts, double voltage, boolean isNailed) {
+    public EuropeanParrot(final int numberOfCoconuts, final double voltage, final boolean isNailed) {
         super(numberOfCoconuts, voltage, isNailed);
     }
 
