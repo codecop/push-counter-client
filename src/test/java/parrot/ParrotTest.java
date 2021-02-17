@@ -1,6 +1,7 @@
 package parrot;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 import org.junit.Test;
 
@@ -60,9 +61,4 @@ public class ParrotTest {
         assertEquals(0.0, parrot.getSpeed(), 0.0);
     }
 
-    @Test
-    public void getSpeedNorwegianBlueParrot_not_nailed_negative_voltage() {
-        Parrot parrot = new NorwegianBlueParrot(-1, false);
-        assertEquals(-12.0, parrot.getSpeed(), 0.0);
-    }
 }
