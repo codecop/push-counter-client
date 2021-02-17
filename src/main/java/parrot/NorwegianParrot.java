@@ -7,6 +7,6 @@ public class NorwegianParrot extends Parrot {
 
     @Override
     public double getSpeed() {
-        return super.getSpeed();
+        return (isNailed) ? 0 : getBaseSpeed(voltage);
     }
 }
