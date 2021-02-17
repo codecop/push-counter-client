@@ -12,4 +12,8 @@ public class AfricanParrot extends Parrot{
         return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
     }
 
+    protected double getLoadFactor() {
+        return 9.0;
+    }
+
 }
