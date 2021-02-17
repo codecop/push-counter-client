@@ -1,6 +1,6 @@
 package parrot;
 
-public class EuropeanParrot extends Parrot{
+public class EuropeanParrot implements Parrot{
 
     @Override
     public double getSpeed(){

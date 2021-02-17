@@ -1,6 +1,6 @@
 package parrot;
 
-public class NorwegianBlueParrot extends Parrot{
+public class NorwegianBlueParrot implements Parrot{
     private final boolean isNailed;
     private final double voltage;
 

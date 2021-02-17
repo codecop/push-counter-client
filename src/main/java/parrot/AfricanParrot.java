@@ -1,6 +1,6 @@
 package parrot;
 
-public class AfricanParrot extends Parrot{
+public class AfricanParrot implements Parrot{
     public static final double LOADFACTOR = 9.0;
     private final int numberOfCoconuts;
 
