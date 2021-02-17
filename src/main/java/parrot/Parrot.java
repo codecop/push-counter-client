@@ -4,7 +4,7 @@ public class Parrot {
 
     private final boolean isNailed;
 
-    public Parrot(final double voltage, final boolean isNailed) {
+    public Parrot(final boolean isNailed) {
         this.isNailed = isNailed;
     }
 
