@@ -33,7 +33,7 @@ public class Parrot {
         return 12.0;
     }
 
-    public int getNumberOfCoconuts() {
+    protected int getNumberOfCoconuts() {
         return numberOfCoconuts;
     }
 
