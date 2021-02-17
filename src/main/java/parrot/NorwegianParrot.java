@@ -14,10 +14,10 @@ public class NorwegianParrot extends Parrot {
 
     @Override
     public double getSpeed() {
-        return nailed ? NAILED_SPEED : getBaseSpeed();
+        return nailed ? NAILED_SPEED : getNotNailedSpeed();
     }
 
-    private double getBaseSpeed() {
+    private double getNotNailedSpeed() {
         return Math.min(MAX_SPEED, voltage * BASE_SPEED);
     }
 
