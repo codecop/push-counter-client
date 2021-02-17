@@ -1,13 +1,13 @@
 package parrot;
 
-public class NorwegianParrot extends Parrot {
+public class NorwegianBlueParrot extends Parrot {
 
     private static final double MAX_SPEED = 24.0;
     private static final int NAILED_SPEED = 0;
     private final double voltage;
     private final boolean nailed;
 
-    public NorwegianParrot(final double voltage, final boolean nailed) {
+    public NorwegianBlueParrot(final double voltage, final boolean nailed) {
         this.voltage = voltage;
         this.nailed = nailed;
     }
