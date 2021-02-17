@@ -42,4 +42,8 @@ public class Parrot {
     public boolean isNailed() {
         return isNailed;
     }
+
+    public double getVoltage() {
+        return voltage;
+    }
 }
