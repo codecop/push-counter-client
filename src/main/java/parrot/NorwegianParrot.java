@@ -13,7 +13,7 @@ public class NorwegianParrot extends Parrot {
 
     @Override
     public double getSpeed() {
-        return (isNailed) ? 0 : getBaseSpeed();
+        return isNailed ? 0 : getBaseSpeed();
     }
 
     private double getBaseSpeed() {
