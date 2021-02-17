@@ -18,7 +18,11 @@ public class NorwegianBlueParrot extends Parrot {
     }
 
     private double getNotNailedSpeed() {
-        return Math.min(MAX_SPEED, voltage * BASE_SPEED);
+        return Math.min(MAX_SPEED, getBaseSpeed());
+    }
+
+    private double getBaseSpeed() {
+        return voltage * BASE_SPEED;
     }
 
 }
