@@ -2,7 +2,7 @@ package parrot;
 
 public class AfricanParrot implements Parrot{
     private static final double LOAD_FACTOR = 9.0;
-    public static final int ZERO = 0;
+    private static final int ZERO = 0;
     private final int numberOfCoconuts;
 
     public AfricanParrot(int numberOfCoconuts) {
