@@ -14,7 +14,7 @@ public class NorwegianBlueParrot implements Parrot{
 
     @Override
     public double getSpeed(){
-        return (isNailed) ? ZERO : getBaseSpeed();
+        return (isNailed) ? NumbersEnum.ZERO.getValue() : getBaseSpeed();
     }
 
     private double getBaseSpeed() {
