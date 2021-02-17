@@ -2,12 +2,8 @@ package parrot;
 
 public abstract class Parrot {
 
-    protected double voltage;
-    protected boolean isNailed;
 
-    public Parrot(double voltage, boolean isNailed) {
-        this.voltage = voltage;
-        this.isNailed = isNailed;
+    public Parrot() {
     }
 
     public abstract double getSpeed();
