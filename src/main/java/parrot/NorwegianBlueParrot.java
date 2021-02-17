@@ -1,7 +1,7 @@
 package parrot;
 
 public class NorwegianBlueParrot implements Parrot{
-    public static final int ZERO = 0;
+    private static final int ZERO = 0;
     private final boolean isNailed;
     private final double voltage;
 
