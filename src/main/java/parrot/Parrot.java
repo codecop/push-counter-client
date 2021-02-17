@@ -1,6 +1,6 @@
 package parrot;
 
-public class Parrot {
+public abstract class Parrot {
 
     private ParrotTypeEnum type;
     protected int numberOfCoconuts;
@@ -14,18 +14,7 @@ public class Parrot {
         this.isNailed = isNailed;
     }
 
-    public double getSpeed() {
-        switch (type) {
-        case EUROPEAN:
-            return getBaseSpeed();
-        case AFRICAN:
-            return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
-        case NORWEGIAN_BLUE:
-            return (isNailed) ? 0 : getBaseSpeed(voltage);
-        default:
-            throw new RuntimeException("Should be unreachable");
-        }
-    }
+    public abstract double getSpeed();
 
     protected double getBaseSpeed(double voltage) {
         return Math.min(24.0, voltage * getBaseSpeed());
