@@ -2,10 +2,7 @@ package parrot;
 
 public class Parrot {
 
-    private final boolean isNailed;
-
     public Parrot(final boolean isNailed) {
-        this.isNailed = isNailed;
     }
 
     public double getSpeed() {
@@ -22,10 +19,6 @@ public class Parrot {
 
     protected double getBaseSpeed() {
         return 12.0;
-    }
-
-    protected boolean isNailed() {
-        return isNailed;
     }
 
 }
