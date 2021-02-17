@@ -55,6 +55,10 @@ public class ParrotTest {
         assertEquals(0.0, parrot.getSpeed(), 0.0);
     }
 
+    @Test
+    public void getSpeedNorwegianBlueParrot_nailed_negative_voltage_throws_exception() {
+        assertThrows(UnsupportedOperationException.class, () -> new NorwegianBlueParrot(-4, true));
+    }
 
     @Test
     public void getSpeedNorwegianBlueParrot_not_nailed_negative_voltage_throw_ex() {
