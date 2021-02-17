@@ -54,4 +54,9 @@ public class ParrotTest {
         assertEquals(0.0, parrot.getSpeed(), 0.0);
     }
 
+    @Test
+    public void getSpeedNorwegianBlueParrot_nailed_negative_voltage() {
+        Parrot parrot = new NorwegianBlueParrot(-1, true);
+        assertEquals(0.0, parrot.getSpeed(), 0.0);
+    }
 }
