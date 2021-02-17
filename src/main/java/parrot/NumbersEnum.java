@@ -1,7 +1,8 @@
 package parrot;
 
 public enum NumbersEnum {
-    BASESPEED(12);
+    BASESPEED(12),
+    LOAD_FACTOR(9);
 
     double value;
 
