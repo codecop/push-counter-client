@@ -2,7 +2,7 @@ package parrot;
 
 public class AfricanParrot extends Parrot{
     public static final double LOADFACTOR = 9.0;
-    private int numberOfCoconuts;
+    private final int numberOfCoconuts;
 
     public AfricanParrot(int numberOfCoconuts) {
         this.numberOfCoconuts = numberOfCoconuts;
