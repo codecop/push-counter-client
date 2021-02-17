@@ -4,4 +4,9 @@ public class NorwegianParrot extends Parrot {
     public NorwegianParrot(int numberOfCoconuts, double voltage, boolean isNailed) {
         super(ParrotTypeEnum.NORWEGIAN_BLUE, numberOfCoconuts, voltage, isNailed);
     }
+
+    @Override
+    public double getSpeed() {
+        return super.getSpeed();
+    }
 }
